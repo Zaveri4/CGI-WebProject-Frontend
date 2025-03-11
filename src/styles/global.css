@@ -1,0 +1,89 @@
+body {
+    background: linear-gradient(to bottom, #87CEEB 0%, #E0F7FA 100%);
+    color: #333;
+}
+
+/* Navbar hover effects */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    opacity: 0.8;
+}
+
+/* Footer link hover effects */
+footer a {
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+.flight-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.flight-table th,
+.flight-table td {
+    vertical-align: middle;
+    padding: 1rem;
+}
+
+.flight-table th {
+    background-color: #007bff; /* Matches bg-primary */
+    color: white;
+    text-align: center;
+}
+
+.flight-table td {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.flight-button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.flight-button:hover {
+    background-color: #0056b3; /* Darker shade of primary */
+    transform: scale(1.05);
+}
+
+.filter-bar {
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+.filter-input {
+    transition: border-color 0.3s ease;
+}
+
+.filter-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.filter-button {
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #e9ecef;
+}
+
+.display-5 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #007bff; /* Убедитесь, что цвет соответствует text-primary */
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
