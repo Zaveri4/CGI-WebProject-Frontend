@@ -3,7 +3,6 @@ body {
     color: #333;
 }
 
-/* Navbar hover effects */
 .navbar-nav .nav-link {
     transition: color 0.3s ease;
 }
@@ -13,7 +12,6 @@ body {
     opacity: 0.8;
 }
 
-/* Footer link hover effects */
 footer a {
     transition: opacity 0.3s ease;
 }
@@ -35,7 +33,7 @@ footer a:hover {
 }
 
 .flight-table th {
-    background-color: #007bff; /* Matches bg-primary */
+    background-color: #007bff;
     color: white;
     text-align: center;
 }
@@ -50,7 +48,7 @@ footer a:hover {
 }
 
 .flight-button:hover {
-    background-color: #0056b3; /* Darker shade of primary */
+    background-color: #0056b3;
     transform: scale(1.05);
 }
 
@@ -80,10 +78,136 @@ footer a:hover {
     font-size: 2.5rem;
     font-weight: 500;
     line-height: 1.2;
-    color: #007bff; /* Убедитесь, что цвет соответствует text-primary */
+    color: #007bff;
 }
 
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
+}
+
+.plane-layout {
+    max-width: 100%;
+}
+
+.plane-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.row-label {
+    width: 50px;
+    font-weight: bold;
+    color: #007bff;
+    margin-right: 1rem;
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.seat {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.seat.available {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+.seat.available:hover {
+    transform: scale(1.05);
+    background-color: #d1d5db;
+}
+
+.seat.occupied {
+    background-color: #6c757d;
+    color: white;
+    cursor: not-allowed;
+}
+
+.seat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.seat-number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.seat-details {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.1rem;
+    flex-wrap: wrap;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.features {
+    display: flex;
+    gap: 0.1rem;
+}
+
+.feature {
+    background-color: #dee2e6;
+    color: #333;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+    font-size: 0.6rem;
+}
+
+.aisle {
+    width: 30px;
+}
+
+.recommended-seats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.recommended-seat {
+    background-color: #28a745;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.recommended-seat .seat-number {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+}
+
+.recommended-seat .seat-details {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.1rem;
+    flex-wrap: wrap;
 }
