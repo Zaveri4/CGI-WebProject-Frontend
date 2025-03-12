@@ -1,0 +1,9 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cgi-web_project-frontend
+    container_name: CGI-WebProject-Frontend
+    ports:
+      - "5173:5173"
