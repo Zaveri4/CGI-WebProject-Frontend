@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# CGI-WebProject-Backend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+See on lennureisijale lennu planeerimise ja lennukis istekohtade soovitamise veebirakendus,
+mis võimaldab valida endale sobivat lennureisi ja saada istekohti enda soovituste põhjal.
+Kasutaja saab valida lennureisi kasutades erinevaid filtreid (kas leida lennureisi sihtkoha, hinna või kuupäeva järgi).
+Kui kasutaja leidis endale sobivat reisi, siis talle pakutakse välja vaba istekohta/istekohti ja ta saab ise valida, mida ta eelistab.
+Näiteks, kas kasutaja tahab istekohta akna all, kas rohkem jalaruumi või lähedal väljapääsule.
+Kui aga kasutaja plaanib osta mitu piletit, siis talle pakutakse välja istekohti, mis on kõrvuti.
+Kogu info dünaamiliselt muutub sõltuvalt kasutaja eelistustest.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React (TypeScript)**
+- **Vite**
+- **Bootstrap** (kasutaja liidese stiiliks)
+- **React Router** (navigatsiooniks)
+- **Axios** (API päringuteks)
+- **Docker** (frontend'i käevitamiseks)
 
-## Expanding the ESLint configuration
+## Kuidas rakendust käivatada
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**NB! Backend ja Docker Desktop peavad olema käivitatud!** 
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Esiteks on vaja klonida repository kas WebStorm'isse või teise IDE.
+2. Järgmiseks on vaja seadistada sõltuvusi käsuga: `npm install`
+3. Viimaseks on vaja käivitada frontendi Docker konteineris käsuga: `docker-compose up -d --build`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Kui kõik on õigesti tehtud, siis frontend on avatud linkil: `http://localhost:5173` ja rakendust on võimalik kasutada.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Aega kuulunud frontendi loomiseks umbes 35+ tundi.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Raskused
+
+- Mul on väike kogemus frontendi loomises, siis ma pidin kasutama igasugused abivahendid, et valmistada midagi, mis ilusti välja näeks.
+Inspiratsiooniks mul oli oma ülikooli projekt, kus kasutatakse samad vahendid, mis ma kasutasin siin.
+Ülikooli projekti repo: `https://gitlab.cs.taltech.ee/kokiss/iti0302-2024-frontend`.
+Samuti kasutasin AI Grok'i abi, et kirjutada kõike stiile, mida kasutatakse frontendis.
